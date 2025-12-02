@@ -11,7 +11,7 @@ export const routes: Routes = [
         loadChildren: () => import('./pages/settings/settings-module').then(module => module.SettingsModule)
     },
     {
-        path: "team",
-        loadComponent: () => import('./pages/about/team/team').then(component => component.Team)
+        path: 'about',
+        loadChildren: () => import('./pages/about/about.routes').then((route) => route.AboutRoutes)
     }
 ];
