@@ -8,5 +8,10 @@ export const AboutRoutes: Routes = [
      {
         path: 'company',
         loadComponent: () => import('./company/company').then((component) => component.Company)
+    },
+    {
+        path: '',
+        redirectTo: 'company',
+        pathMatch: "full"
     }
 ]
