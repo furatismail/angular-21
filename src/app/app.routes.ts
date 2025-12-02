@@ -8,7 +8,7 @@ export const routes: Routes = [
     },
     {
         path: "settings",
-        loadChildren: () => import('./pages/settings/settings-module').then(module => module.SettingsModule)
+        loadChildren: () => import('./pages/settings/settings.routes').then(routes => routes.SettingsRoute)
     },
     {
         path: 'about',
