@@ -1,12 +1,13 @@
 import { Component, Inject, OnDestroy, OnInit, Optional } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
-import { TIME_START_DATE } from './time-module';
+import { DatePipe } from '@angular/common';
+import { TIME_START_DATE } from './time.config';
 
 @Component({
   selector: 'app-time',
   templateUrl: './time.html',
   styleUrl: './time.scss',
-  standalone: false
+  imports: [DatePipe]
 })
 export class Time implements OnInit, OnDestroy {
   count!: Date;

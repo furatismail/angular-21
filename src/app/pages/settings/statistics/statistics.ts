@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Time } from "../../../components/time/time";
 
 @Component({
   selector: 'app-statistics',
-  imports: [],
+  imports: [Time],
   templateUrl: './statistics.html',
   styleUrl: './statistics.scss',
 })
