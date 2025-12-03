@@ -1,11 +1,12 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss',
-  imports: [NgFor]
+  imports: [NgFor],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Dashboard {
   decision = true

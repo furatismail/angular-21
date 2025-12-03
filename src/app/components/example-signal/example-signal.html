@@ -1,0 +1,12 @@
+<p>String {{search()}}</p>
+
+<input type="text" (input)="setSearchString($event)">
+
+<hr>
+
+<ul>
+    <li *ngFor="let user of filteredUsers()">{{user.name}}</li>
+</ul>
+
+<hr>
+<button (click)="addUser()">Přidat uzivatele</button>

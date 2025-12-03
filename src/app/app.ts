@@ -1,13 +1,15 @@
-import { Component, signal } from '@angular/core';
+import { AsyncPipe, JsonPipe } from '@angular/common';
+import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { Time } from './components/time/time';
+import { ExampleSignal } from "./components/example-signal/example-signal";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, Time],
+  imports: [RouterOutlet, RouterLink, AsyncPipe, JsonPipe, ExampleSignal],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('angular-21');
+  
+
 }
