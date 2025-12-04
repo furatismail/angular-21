@@ -1,0 +1,14 @@
+.tab-content {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  .tab.active {
+    background-color: #e0e0e0;
+    font-weight: bold;
+  }

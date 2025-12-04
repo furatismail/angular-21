@@ -1,0 +1,11 @@
+<div class="tab-container">
+    <ul class="tab-title">
+        @for (tab of tabs(); track tab) {
+            <li (click)="selectTab(tab)" [class.active]="tab.active()">
+                {{tab.title()}}
+            </li>
+        }
+    </ul>
+
+    <ng-content></ng-content>
+</div>

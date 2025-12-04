@@ -31,5 +31,21 @@
             </ul>
         }
     </div>
+
+    <div>
+        <label>password:</label>
+        <input type="text" [field]="loginForm.password">
+        valid: {{loginForm.password().valid()}} <br>
+        invalid: {{loginForm.password().invalid()}} <br>
+        touched: {{loginForm.password().touched()}} <br>
+        dirty: {{loginForm.password().dirty()}} <br>
+        @if (loginForm.password().touched() && loginForm.password().invalid()) {
+            <ul>
+                @for (error of loginForm.password().errors(); track error) {
+                    <li>{{error.message}}</li>
+                }
+            </ul>
+        }
+    </div>
     <button type="submit">KLIK</button>
 </form>
