@@ -1,0 +1,35 @@
+<form (submit)="onSubmit($event)">
+    loginForm:
+    <pre>
+        {{loginForm().value() | json}}
+    </pre>
+    <br>
+    <hr>
+    loginModel:
+    <pre>
+        {{loginModel() | json}}
+    </pre>
+    <br>
+    <hr>
+    valid: {{loginForm().valid()}} <br>
+    invalid {{loginForm().invalid()}} <br>
+    touched: {{loginForm().touched()}} <br>
+    dirty: {{loginForm().dirty()}} <br>
+
+    <div>
+        <label>Email:</label>
+        <input type="text" [field]="loginForm.email">
+        valid: {{loginForm.email().valid()}} <br>
+        invalid: {{loginForm.email().invalid()}} <br>
+        touched: {{loginForm.email().touched()}} <br>
+        dirty: {{loginForm.email().dirty()}} <br>
+        @if (loginForm.email().touched() && loginForm.email().invalid()) {
+            <ul>
+                @for (error of loginForm.email().errors(); track error) {
+                    <li>{{error.message}}</li>
+                }
+            </ul>
+        }
+    </div>
+    <button type="submit">KLIK</button>
+</form>

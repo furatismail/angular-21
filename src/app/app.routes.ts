@@ -13,5 +13,9 @@ export const routes: Routes = [
     {
         path: 'about',
         loadChildren: () => import('./pages/about/about.routes').then((route) => route.AboutRoutes)
+    },
+    {
+        path: 'photos',
+        loadChildren: () => import('./pages/photos/photos.routes').then((route) => route.PhotosRoutes)
     }
 ];
