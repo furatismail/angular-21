@@ -1,13 +1,5 @@
-<div class="app-container">
-    <app-tab-container>
-        <app-tab title="Tab 1">
-            <p>Ahoj</p>
-        </app-tab>
-        <app-tab title="Tab 2">
-            <p>Cau</p>
-        </app-tab>
-        <app-tab title="Tab 3">
-            <div>Div</div>
-        </app-tab>
-    </app-tab-container>
-</div>
+<h1 appWindow #portal="portal">ahoj {{title()}}</h1>
+
+<button (click)="changeTitle()">Zmen title</button>
+<button (click)="portal.open()">Open</button>
+<button (click)="portal.close()">Close</button>

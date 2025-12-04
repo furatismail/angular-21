@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
-import { TabContainer } from './patterns/tabs/tab-container/tab-container';
-import { Tab } from './patterns/tabs/tab/tab';
+import { Component, signal } from '@angular/core';
+import { AppWindow } from './directives/app-window';
 
 @Component({
   selector: 'app-root',
-  imports: [TabContainer, Tab],
+  imports: [AppWindow],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
+  title = signal('Svete')
 
+  changeTitle() {
+    this.title.set('Ahoj z noveho okna...')
+  }
 }
